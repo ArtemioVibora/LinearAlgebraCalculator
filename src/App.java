@@ -48,6 +48,7 @@ public class App {
                     display.displayGenErrorMessage();
                     break;
             }
+            System.out.println();
 
         }
     }
