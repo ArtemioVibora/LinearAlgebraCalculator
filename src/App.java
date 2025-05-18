@@ -10,9 +10,14 @@ public class App {
     public static BufferedReader reader = new BufferedReader(inputStreamReader);
     public static Display display = new Display();
     public static Prompter prompt = new Prompter();
+    public static MatrixCalculator matrixCalculator = new MatrixCalculator();
+
+    //ArrayLists and HashMaps
     public static ArrayList<Matrix> matrixContainer = new ArrayList<>();
     public static HashMap<Integer, Integer> rowAndColContainer = new HashMap<>();
     public static HashMap<HashMap<Integer, Integer>, ArrayList<Matrix>> overAllContainer = new HashMap<>();
+
+
 
 
     public void run() throws IOException, NullPointerException
@@ -47,6 +52,9 @@ public class App {
                     break;
                 case 2:
                     System.out.println(matrixContainer);
+                    break;
+                case 3:
+
                     break;
                 case 9:
                     flag = false;

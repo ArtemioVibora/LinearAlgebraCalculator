@@ -9,6 +9,11 @@ public class MatrixCalculator {
         this.matrix2 = matrix2;
     }
 
+    public MatrixCalculator()
+    {
+
+    }
+
     public boolean isAddable(Matrix matrix1, Matrix matrix2)
     {
         if (matrix1.length() != matrix2.length())
@@ -22,6 +27,14 @@ public class MatrixCalculator {
     public boolean isMultipliable(Matrix matrix1, Matrix matrix2)
     {
         return true;
+    }
+
+    public void setMatrix1(Matrix matrix1) {
+        this.matrix1 = matrix1;
+    }
+
+    public void setMatrix2(Matrix matrix2) {
+        this.matrix2 = matrix2;
     }
 
     public Matrix getMatrix1()
