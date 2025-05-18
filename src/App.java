@@ -2,6 +2,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class App {
 
@@ -10,15 +11,18 @@ public class App {
     public static Display display = new Display();
     public static Prompter prompt = new Prompter();
     public static ArrayList<Matrix> matrixContainer = new ArrayList<>();
+    public static HashMap<Integer, Integer> rowAndColContainer = new HashMap<>();
+    public static HashMap<HashMap<Integer, Integer>, ArrayList<Matrix>> overAllContainer = new HashMap<>();
 
-    public void run() throws IOException
+
+    public void run() throws IOException, NullPointerException
     {
         boolean flag = true;
-        int input = 0;
+        int input;
 
         int row;
         int col;
-        Matrix matrix = new Matrix();
+
 
         while (flag)
         {
@@ -29,6 +33,7 @@ public class App {
             {
                 //Enter matrix
                 case 1:
+                    Matrix matrix = new Matrix();
                     row = prompt.promptRow();
                     col = prompt.promptCol();
                     matrix.setRow(row);
@@ -37,6 +42,8 @@ public class App {
                     matrix.setMatrix(tempMatrix);
                     matrix.displayMatrix();
                     matrixContainer.add(matrix);
+                    rowAndColContainer.put(row, col);
+                    overAllContainer.put(rowAndColContainer, matrixContainer);
                     break;
                 case 2:
                     System.out.println(matrixContainer);
@@ -49,10 +56,6 @@ public class App {
                     break;
             }
             System.out.println();
-            System.out.println("Hello");
-            System.out.println("hello");
-            System.out.println("Merged me bitch");
-
         }
     }
 }

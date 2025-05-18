@@ -81,6 +81,12 @@ public class Matrix {
     }
 
 
+    public int length()
+    {
+        return row * col;
+    }
+
+
 
 
 }
