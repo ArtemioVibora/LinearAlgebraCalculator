@@ -12,6 +12,11 @@ public class Display {
         System.out.println();
     }
 
+    public void addingInterfaceOptions()
+    {
+
+    }
+
     public void displayGenErrorMessage()
     {
         System.out.println("Error: Invalid Input!");

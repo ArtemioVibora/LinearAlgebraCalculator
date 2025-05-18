@@ -18,6 +18,11 @@ public class App {
     public static HashMap<HashMap<Integer, Integer>, ArrayList<Matrix>> overAllContainer = new HashMap<>();
 
 
+    public void addingInterface()
+    {
+
+
+    }
 
 
     public void run() throws IOException, NullPointerException
@@ -54,6 +59,7 @@ public class App {
                     System.out.println(matrixContainer);
                     break;
                 case 3:
+                    System.out.println("Adding a matrix");
 
                     break;
                 case 9:
